@@ -1,5 +1,6 @@
-package Domain;
+package TaskLayer;
 
+import Domain.Train;
 import Train_part.TrainPart;
 import Train_part.TrainPartFactory;
 
