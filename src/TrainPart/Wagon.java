@@ -1,4 +1,4 @@
-package TrainComponenten;
+package TrainPart;
 
 import Domain.Component;
 
