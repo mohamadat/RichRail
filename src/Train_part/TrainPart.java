@@ -7,6 +7,19 @@ public class TrainPart {
 		this.type = type;
 	}
 	
+	public TrainPart() {
+		this.type = null;
+	}
+
+	public TrainPartType getType() {
+		return type;
+	}
+
+	public void setType(TrainPartType type) {
+		this.type = type;
+	}
+	
+	
 	
 
 }

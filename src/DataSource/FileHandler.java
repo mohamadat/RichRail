@@ -37,7 +37,7 @@ public String trainTotxt(Train t) {
 
 	
 		String s = "";
-		List componenten = t.getComponenten();
+		List componenten = t.getParts();
 		for (Object object : componenten) {
 			s += object + "," ;
 			

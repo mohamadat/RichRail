@@ -15,7 +15,7 @@ public class Train {
 	}
 	
 	
-	public void addComponent(TrainPart trainpart) {
+	public void addParts(TrainPart trainpart) {
 		this.parts.add(trainpart);
 	}
 	

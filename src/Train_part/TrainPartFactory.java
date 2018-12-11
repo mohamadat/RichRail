@@ -1,16 +1,21 @@
 package Train_part;
 
+import SystemTrain_partsTypes.Passenger1;
+import SystemTrain_partsTypes.Wagon;
+
 public class TrainPartFactory {
-	public void makeTrainPart(String type) {
-		if (type == "Passenger1") {
-				
+	
+	public TrainPart makeTrainPart(String type) {
+		TrainPart tp = new TrainPart();
+		if (type.equalsIgnoreCase("Passenger1")) {
+			tp.setType(new Passenger1());	
 		}
-		if (type == "wagon") {
+		else if (type.equalsIgnoreCase("wagon")) {
+			tp.setType(new Wagon());
 			
 		}
-		if (type == "Passenger2") {
-			
-		}
+		
+		return tp;
 		
 		
 	}

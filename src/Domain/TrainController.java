@@ -1,18 +1,25 @@
 package Domain;
 
+import Train_part.TrainPart;
+import Train_part.TrainPartFactory;
+
 public class TrainController {
-	public void createTrain() {
+	
+	//new train
+	public Train createTrain(String code) {
+		Train t1 = new Train(code);
 		
+		return t1;
 	}
 	
+
 	
-	public void selectTrain() {
+	
+	public void AddTrainPart(Train t, String type) {
+		TrainPartFactory tpf = new TrainPartFactory();
+		TrainPart trainpart = tpf.makeTrainPart(type);
+		t.addParts(trainpart);
 		
-	}
-	public void delTrain(String trainCode) {
-		
-	}
-	public void AddTrainPart(String trainCode, String type) {
 		
 	}
 
@@ -22,4 +29,10 @@ public class TrainController {
 	
 	
 	
+	public void selectTrain() {
+		
+	}
+	public void delTrain(String trainCode) {
+		
+	}
 }
