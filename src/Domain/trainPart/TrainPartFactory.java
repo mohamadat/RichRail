@@ -1,7 +1,7 @@
-package Train_part;
+package Domain.trainPart;
 
-import SystemTrain_partsTypes.Passenger1;
-import SystemTrain_partsTypes.Wagon;
+import Domain.systemTtrainPart.Passenger1;
+import Domain.systemTtrainPart.Wagon;
 
 public class TrainPartFactory {
 	

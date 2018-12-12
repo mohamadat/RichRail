@@ -3,8 +3,7 @@ package Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-import Train_part.TrainPart;
-
+import Domain.trainPart.*;
 public class Train {
 	String code;
 	List<TrainPart> parts;

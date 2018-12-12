@@ -1,7 +1,6 @@
-package SystemTrain_partsTypes;
+package Domain.systemTtrainPart;
 
-import Train_part.TrainPartType;
-
+import Domain.trainPart.*;
 public class Wagon extends TrainPartType {
 
 	public Wagon() {

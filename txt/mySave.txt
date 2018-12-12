@@ -1,2 +1,2 @@
-ns ,Passenger1
+fastTrain 
 red ,Passenger1,Passenger1,Passenger1

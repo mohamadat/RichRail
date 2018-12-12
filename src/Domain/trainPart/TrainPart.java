@@ -1,4 +1,4 @@
-package Train_part;
+package Domain.trainPart;
 
 public class TrainPart {
 	private TrainPartType type;

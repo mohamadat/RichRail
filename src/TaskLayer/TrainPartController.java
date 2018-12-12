@@ -1,7 +1,7 @@
 package TaskLayer;
 
-import Train_part.TrainPartType;
-import Train_part.newType;
+import Domain.trainPart.TrainPartType;
+import Domain.trainPart.newType;
 
 public class TrainPartController {
 	

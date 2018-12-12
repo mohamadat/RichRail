@@ -1,6 +1,5 @@
-package SystemTrain_partsTypes;
-
-import Train_part.TrainPartType;
+package Domain.systemTtrainPart;
+import Domain.trainPart.*;
 
 public class Passenger1 extends TrainPartType {
 

@@ -16,7 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import Domain.Train;
-import Train_part.TrainPart;
+import Domain.trainPart.*;
+
 
 public class TextEditor {
 

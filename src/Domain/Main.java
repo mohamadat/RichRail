@@ -1,6 +1,7 @@
 package Domain;
 
 import java.io.FileNotFoundException;
+
 import java.io.UnsupportedEncodingException;
 
 import DataSource.DataHandler;
@@ -8,8 +9,7 @@ import DataSource.FileHandler;
 import DataSource.TextEditor;
 import TaskLayer.TrainController;
 import TaskLayer.TrainPartController;
-import Train_part.TrainPartType;
-
+import Domain.trainPart.*;
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
@@ -18,16 +18,16 @@ public class Main {
 		TrainPartController tpc = new TrainPartController();
 		
 		//Train
-		Train t = tc.createTrain("fastTrain");
-		Train t2 = tc.createTrain("red");
-		Train t3 = tc.createTrain("ns");
+	//	Train t = tc.createTrain("fastTrain");
+		//Train t2 = tc.createTrain("red");
+		//Train t3 = tc.createTrain("ns");
 		
-		tc.AddTrainPart(t2,"passenger1");	
-		tc.AddTrainPart(t2,"passenger1");	
-		tc.AddTrainPart(t2,"passenger1");	
+	//	tc.AddTrainPart(t2,"passenger1");	
+		//tc.AddTrainPart(t2,"passenger1");	
+		//tc.AddTrainPart(t2,"passenger1");	
 
 
-        //tc.delTrain("red");
+        tc.delTrain("ns");
 
 		
 		//tc.AddTrainPart(t,"wagon");

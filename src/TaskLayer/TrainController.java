@@ -3,8 +3,8 @@ package TaskLayer;
 import DataSource.DataHandler;
 import DataSource.FileHandler;
 import Domain.Train;
-import Train_part.TrainPart;
-import Train_part.TrainPartFactory;
+import Domain.trainPart.TrainPart;
+import Domain.trainPart.TrainPartFactory;
 
 public class TrainController {
 	private DataHandler dh = new FileHandler();

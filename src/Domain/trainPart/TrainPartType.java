@@ -1,4 +1,4 @@
-package Train_part;
+package Domain.trainPart;
 
 public abstract class TrainPartType {
 	protected String type;
