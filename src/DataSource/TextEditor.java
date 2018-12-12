@@ -9,6 +9,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -39,7 +41,11 @@ public class TextEditor {
 	    writer.write(line);
 	    writer.write("\n");
 	    
+	    System.out.println(f.exists());
+	    boolean b = f.delete();
+	    System.out.println("delete state is " + b);
 	    boolean successful = tempFile.renameTo(f);
+	    System.out.println(successful + " this is rename state");
 
 	    }
 	    
