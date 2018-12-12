@@ -13,7 +13,9 @@ public class Train {
 	this.parts = new ArrayList<TrainPart>();	
 	}
 	
-	
+	public int getTrainSize() {
+		return this.parts.size();
+	}
 	
 	public String getCode() {
 		return code;
@@ -31,6 +33,10 @@ public class Train {
 		this.parts.add(trainpart);
 	}
 	
+	public void delParts(int index) {
+		this.parts.remove(index);
+	}
+	
 	
 	
 public List getPartsTypes() {
@@ -44,15 +50,15 @@ public List getPartsTypes() {
 
 @Override
 public String toString() {
-	String s = ";";
+	String s = " ";
 	for (Object object : parts) {
 		s += object + "," ;
 		
 	}
     s = s.substring(0, s.length() - 1);
-
-	s+=";";
-	return code;
+    s+=";";
+	
+    return code + s;
 
 }
 

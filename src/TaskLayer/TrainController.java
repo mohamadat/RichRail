@@ -18,27 +18,35 @@ public class TrainController {
 		return t1;
 	}
 	
-
 	
-	
-	public void AddTrainPart(Train t, String type) {
+	public void AddTrainPart(String trainCode, String type) {
+		Train t = selectTrain(trainCode);
+		
+		
 		TrainPartFactory tpf = new TrainPartFactory();
 		TrainPart trainpart = tpf.makeTrainPart(type);
 		t.addParts(trainpart);
-		String trainCode = t.getCode();
 		dh.editTrain(trainCode, t);
 		
 		
 	}
 
-	public void delTrainPart(String trainCode, int index) {
+	public void delTrainPart(String trainCode , int index) {
+		index -= 1;
+		
+		Train t = selectTrain(trainCode);
+		if (t != null) {
+		t.delParts(index);
+		dh.editTrain(trainCode, t);
+		}
 		
 	}
 	
 	
 	
-	public void selectTrain() {
-		
+	public Train selectTrain(String trainCode) {
+		Train t = dh.selectTrain(trainCode);
+		return t;
 	}
 	public void delTrain(String trainCode) {
 		dh.deleteTrain(trainCode);

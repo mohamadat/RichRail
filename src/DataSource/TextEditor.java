@@ -78,15 +78,22 @@ public class TextEditor {
 		    String line;
 		    while ((line = br.readLine()) != null) {
 		    System.out.println(line);
-		    //line = line.replaceAll("-+-+-", ",");
 		    List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
-		    if (items.get(0).equals(code)) {
+		    
+		    //test
+	    	System.out.println("list 0 " + items.get(0));
+	    	System.out.println("code  " +code);
+	    	System.out.println();
+
+		    
+		    if (items.get(0).trim().equalsIgnoreCase(code)) {
+		    	System.out.println("TrainFound");
 		    	return items;
 		    }
 		    System.out.println(items.get(0));
 		    }
 		}
-
+		System.out.println("not found");
 		return null;
 
 	}

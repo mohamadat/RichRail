@@ -17,18 +17,47 @@ public class Main {
 		TrainController tc = new TrainController();
 		TrainPartController tpc = new TrainPartController();
 		
-		//Train
-	//	Train t = tc.createTrain("fastTrain");
-		//Train t2 = tc.createTrain("red");
-		//Train t3 = tc.createTrain("ns");
+		// make new Train
+		Train t = tc.createTrain("ns_train");
+		Train t2 = tc.createTrain("red_train");
+
+		
+		// add parts
+    	tc.AddTrainPart("ns_train","passenger1");	
+    	tc.AddTrainPart("ns_train","wagon");
+    	tc.AddTrainPart("ns_train","newPart");	
+
+
+		
+		//delete parts
+		tc.delTrainPart("ns_train", 1);
+
+    	
+		
+		//delete train
+		tc.delTrain("ns_train");
+
+		
+		
+		//find train
+		tc.selectTrain("red");
+
+		
+
 		
 	//	tc.AddTrainPart(t2,"passenger1");	
 		//tc.AddTrainPart(t2,"passenger1");	
 		//tc.AddTrainPart(t2,"passenger1");	
+		
+		//tc.createTrain("b");
+		
+		//tc.AddTrainPart("ns","");
 
-
-        tc.delTrain("ns");
-
+		//tc.delTrain("ns");
+		
+		tc.delTrainPart("ns", 1);
+		//tc.selectTrain("red");
+		//tc.delTrainPart("red", 1);
 		
 		//tc.AddTrainPart(t,"wagon");
 		//tc.AddTrainPart(t,"passenger1");	

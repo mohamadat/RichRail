@@ -1,2 +1,7 @@
 fastTrain 
-red ,Passenger1,Passenger1,Passenger1
+fastTrain 
+fastTrain 
+b 
+red_train 
+ns_train ,Passenger1,wagon,newPart
+ns 

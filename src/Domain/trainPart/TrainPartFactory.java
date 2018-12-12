@@ -15,6 +15,10 @@ public class TrainPartFactory {
 			
 		}
 		
+		else {
+		tp.setType(new newType(type));
+		}
+		
 		return tp;
 		
 		
