@@ -23,15 +23,16 @@ public class Main {
 		tc.AddTrainPart(t,"passenger1");	
 		tc.AddTrainPart(t,"wagon");
 		tc.AddTrainPart(t,"passenger1");	
+		tc.delTrain("zTrain");
 		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
 		
 		
 		//Data Source
-		DataHandler file = new FileHandler();
-		file.addTrain(t);
-		file.selectTrain("");
+		//DataHandler file = new FileHandler();
+	//	file.addTrain(t);
+		//file.selectTrain("");
 }
 	
 	

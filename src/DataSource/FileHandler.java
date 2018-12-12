@@ -38,8 +38,12 @@ public class FileHandler implements DataHandler {
 
 
 	@Override
-	public void deleteTrain(Train t) {
-		// TODO Auto-generated method stub
+	public void deleteTrain(String trainCode) {
+		try {
+			ed.delTrain(trainCode);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 

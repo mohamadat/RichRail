@@ -1,14 +1,19 @@
 package TaskLayer;
 
+import DataSource.DataHandler;
+import DataSource.FileHandler;
 import Domain.Train;
 import Train_part.TrainPart;
 import Train_part.TrainPartFactory;
 
 public class TrainController {
+	private DataHandler dh = new FileHandler();
 	
 	//new train
 	public Train createTrain(String code) {
 		Train t1 = new Train(code);
+		dh.addTrain(t1);
+		
 		
 		return t1;
 	}
@@ -34,6 +39,8 @@ public class TrainController {
 		
 	}
 	public void delTrain(String trainCode) {
+		dh.deleteTrain(trainCode);
+		
 		
 	}
 }

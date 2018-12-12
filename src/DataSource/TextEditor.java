@@ -1,10 +1,12 @@
 package DataSource;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
@@ -19,6 +21,43 @@ public class TextEditor {
 	private String filePath = "mySave.txt";
 	private File f = new File(filePath);
 	private PrintWriter writer;
+	
+	
+	public void delTrain(String code) throws IOException {
+		File tempFile = new File("myTempFile.txt");
+		BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+	    String line;
+	    while ((line = br.readLine()) != null) { 	
+	    List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
+	    System.out.println("i am items.0" + items.get(0));
+	    if (items.get(0).trim().equals(code)) {
+	    	//System.out.println("fouuuuuuund");
+	    	continue;   	
+	    }
+	    writer.write(line);
+	    writer.write("\n");
+	    
+	    boolean successful = tempFile.renameTo(f);
+
+	    }
+	    
+	    br.close();
+		writer.close(); 
+	} 
+		catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+		
+
+		
+	}
 
 	public List findTrain(String code) throws FileNotFoundException, IOException {
 		List train;
