@@ -18,12 +18,12 @@ public class Main {
 		TrainPartController tpc = new TrainPartController();
 		
 		//Train
-		Train t = tc.createTrain("redTrain");
+		Train t = tc.createTrain("ns Train");
 		tc.AddTrainPart(t,"wagon");
 		tc.AddTrainPart(t,"passenger1");	
 		tc.AddTrainPart(t,"wagon");
 		tc.AddTrainPart(t,"passenger1");	
-		tc.delTrain("zTrain");
+		tc.delTrain("redTrain");
 		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);

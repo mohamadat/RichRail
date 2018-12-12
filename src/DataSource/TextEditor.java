@@ -20,13 +20,13 @@ import Train_part.TrainPart;
 
 public class TextEditor {
 
-	private String filePath = "mySave.txt";
+	private String filePath = "txt/mySave.txt";
 	private File f = new File(filePath);
 	private PrintWriter writer;
 	
 	
 	public void delTrain(String code) throws IOException {
-		File tempFile = new File("myTempFile.txt");
+		File tempFile = new File("txt/myTempFile.txt");
 		BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
 		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
@@ -41,16 +41,27 @@ public class TextEditor {
 	    writer.write(line);
 	    writer.write("\n");
 	    
-	    System.out.println(f.exists());
-	    boolean b = f.delete();
-	    System.out.println("delete state is " + b);
-	    boolean successful = tempFile.renameTo(f);
-	    System.out.println(successful + " this is rename state");
+	    
+	    //need to be fixed
+	    //test to replace the old txt file(myS)aves with the new one myTempFile and rename the new one to mySave
+	    
+
 
 	    }
 	    
 	    br.close();
 		writer.close(); 
+	    System.out.println(f.exists());
+	    boolean b = f.delete();
+	    System.out.println("delete state is " + b);
+	    if( tempFile.renameTo(f)) {
+		    System.out.println( "rename is done");
+	    }
+	    else {
+	    	System.out.println("faild");
+	    }
+		
+		
 	} 
 		catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
