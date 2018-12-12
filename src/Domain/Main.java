@@ -1,5 +1,9 @@
 package Domain;
 
+/* this class is for test use
+ * plz note that is is only connected to the controller classes 
+ */
+
 import java.io.FileNotFoundException;
 
 import java.io.UnsupportedEncodingException;
@@ -17,7 +21,7 @@ public class Main {
 		TrainController tc = new TrainController();
 		TrainPartController tpc = new TrainPartController();
 		
-	/*
+		
 		// make new Train
 		Train t = tc.createTrain("ns_train");
 		Train t2 = tc.createTrain("red_train");
@@ -39,32 +43,13 @@ public class Main {
 		//tc.delTrain("ns_train");
 
 		
-		*/
+
 		//find train
 		System.out.println(tc.selectTrain("ns_train"));
 
 		
 
-		
-	//	tc.AddTrainPart(t2,"passenger1");	
-		//tc.AddTrainPart(t2,"passenger1");	
-		//tc.AddTrainPart(t2,"passenger1");	
-		
-		//tc.createTrain("b");
-		
-		//tc.AddTrainPart("ns","");
-
-		//tc.delTrain("ns");
-		
-		//tc.delTrainPart("ns", 1);
-		//tc.selectTrain("red");
-		//tc.delTrainPart("red", 1);
-		
-		//tc.AddTrainPart(t,"wagon");
-		//tc.AddTrainPart(t,"passenger1");	
-		//tc.AddTrainPart(t,"wagon");
-		//tc.AddTrainPart(t,"passenger1");	
-		//tc.delTrain("nhhhhhhs");
+	
 		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
