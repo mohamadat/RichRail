@@ -92,4 +92,9 @@ public class FileHandler implements DataHandler {
 
 	}
 
+	@Override
+	public List selectAllTypes() {
+		return ed.selectAlltypes();
+	}
+
 }

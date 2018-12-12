@@ -12,6 +12,7 @@ public interface DataHandler {
 	public List selectAllTrainCodes();
 	
 	public void addRollerType(String type, int zitPlaatsen);
+	public List selectAllTypes();
 		
 
 

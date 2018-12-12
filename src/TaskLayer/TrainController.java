@@ -35,7 +35,6 @@ public class TrainController {
 
 	public void delTrainPart(String trainCode , int index) {
 		index -= 1;
-		
 		Train t = selectTrain(trainCode);
 		if (t != null) {
 		t.delParts(index);

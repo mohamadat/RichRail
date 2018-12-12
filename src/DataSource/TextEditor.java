@@ -23,6 +23,8 @@ public class TextEditor {
 
 	private String filePath = "txt/mySave.txt";
 	private File f = new File(filePath);
+	private File t = new File("txt/types.txt");
+
 	private PrintWriter writer;
 	
 	public void delTrain(String code) throws IOException {
@@ -131,6 +133,30 @@ public class TextEditor {
 		return s;
 	}
 
+	public List selectAlltypes() {
+		String type;
+		String zitPlaats;
+		List allTypes = new ArrayList<String>();
+
+		try (BufferedReader br = new BufferedReader(new FileReader(t))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
+				type = items.get(0);
+				zitPlaats = items.get(1);
+				allTypes.add(type);
+				allTypes.add(zitPlaats);
+
+
+			}} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		return allTypes;
+		}
+	
+	
 	public List selectAllcodes() {
 		String trainCode;
 		List allCodes = new ArrayList<String>();

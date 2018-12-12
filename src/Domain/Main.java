@@ -53,9 +53,9 @@ public class Main {
 
 		
 		//Train Part
-		//TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
-		tpc.CreateTrainPartType("first type", 88);
-		
+		//tpc.CreateTrainPartType("first type", 88);
+
+		System.out.println(tpc.selectTrainPartTypes());
 		//select all trains
 		//System.out.println(tc.selectAllTrainCodes());
 	//to be added
