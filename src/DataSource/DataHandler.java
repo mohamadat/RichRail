@@ -10,6 +10,8 @@ public interface DataHandler {
 	public void deleteTrain(String trainCode);
 	public Train selectTrain(String trainName);
 	public List selectAllTrainCodes();
+	
+	public void addRollerType(String type, int zitPlaatsen);
 		
 
 

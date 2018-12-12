@@ -23,7 +23,7 @@ public class Main {
 		
 		
 		// make new Train
-		//Train t = tc.createTrain("soseh_train");
+	//	Train t = tc.createTrain("soseh_train");
 		//Train t2 = tc.createTrain("red_train");
 
 		
@@ -54,11 +54,10 @@ public class Main {
 		
 		//Train Part
 		//TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
-		
-		
+		tpc.CreateTrainPartType("first type", 88);
 		
 		//select all trains
-		System.out.println(tc.selectAllTrainCodes());
+		//System.out.println(tc.selectAllTrainCodes());
 	//to be added
 		/*
 		 * select all trains codes in an array

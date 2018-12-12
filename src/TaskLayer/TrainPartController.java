@@ -5,9 +5,8 @@ import Domain.trainPart.newType;
 
 public class TrainPartController {
 	
-	
 	public TrainPartType CreateTrainPartType(String code, int zitplaats) {
-		TrainPartType tpt = new newType(code, zitplaats); 
+		TrainPartType tpt = new newType(code, zitplaats);
 		return tpt;
 	}
 	

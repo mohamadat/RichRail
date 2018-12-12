@@ -24,11 +24,10 @@ public class TextEditor {
 	private String filePath = "txt/mySave.txt";
 	private File f = new File(filePath);
 	private PrintWriter writer;
-
+	
 	public void delTrain(String code) throws IOException {
 		File tempFile = new File("txt/myTempFile.txt");
 		BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-
 		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -90,19 +89,24 @@ public class TextEditor {
 
 	}
 
-	public void write(String yourText) throws FileNotFoundException {
+	public void write(String yourText,File file) throws FileNotFoundException {
+		String s = file.getPath();
+		System.out.println(s);
 
-		if (f.exists() && !f.isDirectory()) {
-			writer = new PrintWriter(new FileOutputStream(new File(filePath), true));
+		if (file.exists() && !file.isDirectory()) {
+			writer = new PrintWriter(new FileOutputStream(new File(file.getPath()), true));
 
 		} else {
-			writer = new PrintWriter(filePath);
+			System.out.println("hoi");
+			writer = new PrintWriter(file.getPath());
 		}
 
 		writer.append(yourText);
 		writer.close();
 
 	}
+	
+
 
 	public String trainTotxt(Train t) {
 		String spaceingChar = "\n";
