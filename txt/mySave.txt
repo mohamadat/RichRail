@@ -4,4 +4,5 @@ fastTrain
 b 
 red_train 
 ns_train ,Passenger1,wagon,newPart
-ns 
+ns
+soseh_train ,Passenger1

@@ -23,19 +23,23 @@ public class Main {
 		
 		
 		// make new Train
-		Train t = tc.createTrain("ns_train");
-		Train t2 = tc.createTrain("red_train");
+		//Train t = tc.createTrain("soseh_train");
+		//Train t2 = tc.createTrain("red_train");
 
 		
 		// add parts
-    	tc.AddTrainPart("ns_train","passenger1");	
-    	tc.AddTrainPart("ns_train","wagon");
-    	tc.AddTrainPart("ns_train","newPart");	
+    //	tc.AddTrainPart("soseh_train","passenger1");	
+    	//tc.AddTrainPart("soseh_train","zain");	
+
+    	//tc.AddTrainPart("soseh_train","omar");	
+
+    	//tc.AddTrainPart("ns_train","wagon");
+    //	tc.AddTrainPart("ns_train","newPart");	
 
 
 		
 		//delete parts
-		//tc.delTrainPart("ns_train", 1);
+		tc.delTrainPart("soseh_train", 2);
 
     	
 		
