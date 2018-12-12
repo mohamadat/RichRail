@@ -50,16 +50,11 @@ public List getPartsTypes() {
 
 @Override
 public String toString() {
-	String s = " ";
-	for (Object object : parts) {
-		s += object + "," ;
-		
-	}
-    s = s.substring(0, s.length() - 1);
-    s+=";";
-	
-    return code + s;
-
+	return "Train [code=" + code + ", parts=" + parts + "]";
 }
+
+
+
+
 
 }

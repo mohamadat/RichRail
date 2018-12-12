@@ -21,7 +21,7 @@ public class TrainPart {
 
 	@Override
 	public String toString() {
-		return type.toString();
+		return type.getType();
 	}
 	
 	

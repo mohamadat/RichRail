@@ -17,6 +17,7 @@ public class Main {
 		TrainController tc = new TrainController();
 		TrainPartController tpc = new TrainPartController();
 		
+	/*
 		// make new Train
 		Train t = tc.createTrain("ns_train");
 		Train t2 = tc.createTrain("red_train");
@@ -30,17 +31,17 @@ public class Main {
 
 		
 		//delete parts
-		tc.delTrainPart("ns_train", 1);
+		//tc.delTrainPart("ns_train", 1);
 
     	
 		
 		//delete train
-		tc.delTrain("ns_train");
+		//tc.delTrain("ns_train");
 
 		
-		
+		*/
 		//find train
-		tc.selectTrain("red");
+		System.out.println(tc.selectTrain("ns_train"));
 
 		
 
@@ -55,7 +56,7 @@ public class Main {
 
 		//tc.delTrain("ns");
 		
-		tc.delTrainPart("ns", 1);
+		//tc.delTrainPart("ns", 1);
 		//tc.selectTrain("red");
 		//tc.delTrainPart("red", 1);
 		
