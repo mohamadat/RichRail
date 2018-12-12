@@ -48,13 +48,15 @@ public class Main {
 		System.out.println(tc.selectTrain("ns_train"));
 
 		
-
-	
-		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
 		
-	
+	//to be added
+		/*
+		 * select all trains codes in an array
+		 * select all types names in an array
+		 * 
+		 */
 }
 	
 	
