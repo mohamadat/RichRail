@@ -24,11 +24,6 @@ public class Main {
 		tc.AddTrainPart(t,"wagon");
 		tc.AddTrainPart(t,"passenger1");	
 		
-		//test
-		//TextEditor x = new TextEditor();
-		/// test = x.trainTotxt(t);
-		//System.out.println(test);
-		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
 		
@@ -36,6 +31,7 @@ public class Main {
 		//Data Source
 		DataHandler file = new FileHandler();
 		file.addTrain(t);
+		file.selectTrain("");
 }
 	
 	

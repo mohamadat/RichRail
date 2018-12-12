@@ -3,6 +3,7 @@ package DataSource;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -44,7 +45,14 @@ public class FileHandler implements DataHandler {
 
 
 	@Override
-	public void viewTrain(String trainName) {
+	public Train selectTrain(String trainName) {
+		try {
+			ed.findTrain("test");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
