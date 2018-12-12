@@ -39,7 +39,7 @@ public class Main {
 
 		
 		//delete parts
-		tc.delTrainPart("soseh_train", 2);
+	//	tc.delTrainPart("soseh_train", 2);
 
     	
 		
@@ -49,12 +49,16 @@ public class Main {
 		
 
 		//find train
-		System.out.println(tc.selectTrain("ns_train"));
+	//	System.out.println(tc.selectTrain("ns_train"));
 
 		
 		//Train Part
-		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
+		//TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
 		
+		
+		
+		//select all trains
+		System.out.println(tc.selectAllTrainCodes());
 	//to be added
 		/*
 		 * select all trains codes in an array

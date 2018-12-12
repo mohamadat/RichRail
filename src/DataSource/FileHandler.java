@@ -62,12 +62,12 @@ public class FileHandler implements DataHandler {
 			List l = ed.findTrain(trainName);
 			System.out.println(String.valueOf(l.get(0)));
 			t = new Train(String.valueOf(l.get(0)));
-			
+
 			for (int i = 1; i < l.size(); i++) {
-				TrainPart part =  tpf.makeTrainPart(String.valueOf(l.get(i)));
+				TrainPart part = tpf.makeTrainPart(String.valueOf(l.get(i)));
 				t.addParts(part);
 			}
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,6 +75,12 @@ public class FileHandler implements DataHandler {
 		return t;
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public List selectAllTrainCodes() {
+
+		return ed.selectAllcodes();
 	}
 
 }

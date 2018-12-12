@@ -1,5 +1,7 @@
 package TaskLayer;
 
+import java.util.List;
+
 import DataSource.DataHandler;
 import DataSource.FileHandler;
 import Domain.Train;
@@ -42,7 +44,9 @@ public class TrainController {
 		
 	}
 	
-	
+	public List selectAllTrainCodes() {		
+		return dh.selectAllTrainCodes();
+	}
 	
 	public Train selectTrain(String trainCode) {
 		Train t = dh.selectTrain(trainCode);
@@ -51,6 +55,6 @@ public class TrainController {
 	public void delTrain(String trainCode) {
 		dh.deleteTrain(trainCode);
 		
-		
 	}
+	
 }
