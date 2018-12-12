@@ -25,6 +25,8 @@ public class TrainController {
 		TrainPartFactory tpf = new TrainPartFactory();
 		TrainPart trainpart = tpf.makeTrainPart(type);
 		t.addParts(trainpart);
+		String trainCode = t.getCode();
+		dh.editTrain(trainCode, t);
 		
 		
 	}

@@ -40,12 +40,6 @@ public class TextEditor {
 	    }
 	    writer.write(line);
 	    writer.write("\n");
-	    
-	    
-	    //need to be fixed
-	    //test to replace the old txt file(myS)aves with the new one myTempFile and rename the new one to mySave
-	    
-
 
 	    }
 	    
@@ -57,9 +51,9 @@ public class TextEditor {
 	    if( tempFile.renameTo(f)) {
 		    System.out.println( "rename is done");
 	    }
-	    else {
-	    	System.out.println("faild");
-	    }
+	   else {
+	   	System.out.println("faild");
+	  }
 		
 		
 	} 

@@ -31,8 +31,19 @@ public class FileHandler implements DataHandler {
 
 
 	@Override
-	public void editTrain(Train oldTrain, Train newTrain) {
-		// TODO Auto-generated method stub
+	public void editTrain(String oldTraincode, Train newTrain) {
+		try {
+			//delete old one
+			ed.delTrain(oldTraincode);
+			System.out.println("old is deleted");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		//add new one
+		addTrain(newTrain);
+		System.out.println("new is added");
+
+		
 		
 	}
 

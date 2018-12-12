@@ -18,21 +18,28 @@ public class Main {
 		TrainPartController tpc = new TrainPartController();
 		
 		//Train
-		Train t = tc.createTrain("ns Train");
-		tc.AddTrainPart(t,"wagon");
-		tc.AddTrainPart(t,"passenger1");	
-		tc.AddTrainPart(t,"wagon");
-		tc.AddTrainPart(t,"passenger1");	
-		tc.delTrain("redTrain");
+		Train t = tc.createTrain("fastTrain");
+		Train t2 = tc.createTrain("red");
+		Train t3 = tc.createTrain("ns");
+		
+		tc.AddTrainPart(t2,"passenger1");	
+		tc.AddTrainPart(t2,"passenger1");	
+		tc.AddTrainPart(t2,"passenger1");	
+
+
+        //tc.delTrain("red");
+
+		
+		//tc.AddTrainPart(t,"wagon");
+		//tc.AddTrainPart(t,"passenger1");	
+		//tc.AddTrainPart(t,"wagon");
+		//tc.AddTrainPart(t,"passenger1");	
+		//tc.delTrain("nhhhhhhs");
 		
 		//Train Part
 		TrainPartType type = tpc.CreateTrainPartType("testWagons", 20);
 		
-		
-		//Data Source
-		//DataHandler file = new FileHandler();
-	//	file.addTrain(t);
-		//file.selectTrain("");
+	
 }
 	
 	
