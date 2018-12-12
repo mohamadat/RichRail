@@ -3,14 +3,19 @@ package Domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import DataSource.DataHandler;
+import DataSource.FileHandler;
 import Domain.trainPart.*;
 public class Train {
+	private DataHandler dh = new FileHandler();
 	String code;
 	List<TrainPart> parts;
 	
 	public Train(String code) {
 		this.code = code;
 	this.parts = new ArrayList<TrainPart>();	
+	dh.addTrain(this);
+
 	}
 	
 	public int getTrainSize() {

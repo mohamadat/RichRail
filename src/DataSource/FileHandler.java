@@ -18,8 +18,7 @@ public class FileHandler implements DataHandler {
 	@Override
 	public void addTrain(Train t) {
 		try {
-			ed.write(ed.trainTotxt(t),f);
-			System.out.println("train is added to the file mysave.txt");
+			ed.write(ed.trainTotxt(t), f);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -30,21 +29,20 @@ public class FileHandler implements DataHandler {
 	public void editTrain(String oldTraincode, Train newTrain) {
 		try {
 			// delete old one
-			ed.delTrain(oldTraincode);
-			System.out.println("old is deleted");
+			ed.delTrain(oldTraincode, f);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		// add new one
 		addTrain(newTrain);
-		System.out.println("new is added");
+		System.out.println("Train is successfully updated");
 
 	}
 
 	@Override
 	public void deleteTrain(String trainCode) {
 		try {
-			ed.delTrain(trainCode);
+			ed.delTrain(trainCode, f);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -58,7 +56,6 @@ public class FileHandler implements DataHandler {
 
 		try {
 			List l = ed.findTrain(trainName);
-			System.out.println(String.valueOf(l.get(0)));
 			t = new Train(String.valueOf(l.get(0)));
 
 			for (int i = 1; i < l.size(); i++) {
@@ -83,9 +80,9 @@ public class FileHandler implements DataHandler {
 
 	@Override
 	public void addRollerType(String type, int zitPlaatsen) {
-		String s = type +", "+ zitPlaatsen+"\n";
-		 try {
-			ed.write(s,t);
+		String s = type + ", " + zitPlaatsen + "\n";
+		try {
+			ed.write(s, t);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -95,6 +92,16 @@ public class FileHandler implements DataHandler {
 	@Override
 	public List selectAllTypes() {
 		return ed.selectAlltypes();
+	}
+
+	@Override
+	public void delType(String type) {
+		try {
+
+			ed.delTrain(type, t);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

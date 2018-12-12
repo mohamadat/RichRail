@@ -27,16 +27,14 @@ public class TextEditor {
 
 	private PrintWriter writer;
 	
-	public void delTrain(String code) throws IOException {
+	public void delTrain(String code,File file) throws IOException {
 		File tempFile = new File("txt/myTempFile.txt");
 		BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
-				System.out.println("i am items.0" + items.get(0));
 				if (items.get(0).trim().equals(code)) {
-					// System.out.println("fouuuuuuund");
 					continue;
 				}
 				writer.write(line);
@@ -46,11 +44,8 @@ public class TextEditor {
 
 			br.close();
 			writer.close();
-			System.out.println(f.exists());
-			boolean b = f.delete();
-			System.out.println("delete state is " + b);
-			if (tempFile.renameTo(f)) {
-				System.out.println("rename is done");
+			boolean b = file.delete();
+			if (tempFile.renameTo(file)) {
 			} else {
 				System.out.println("faild");
 			}
@@ -64,6 +59,8 @@ public class TextEditor {
 		}
 
 	}
+	
+
 
 	public List findTrain(String code) throws FileNotFoundException, IOException {
 		List train;
@@ -71,16 +68,8 @@ public class TextEditor {
 		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
 			String line;
 			while ((line = br.readLine()) != null) {
-				System.out.println(line);
 				List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
-
-				// test
-				System.out.println("list 0 " + items.get(0));
-				System.out.println("code  " + code);
-				System.out.println();
-
 				if (items.get(0).trim().equalsIgnoreCase(code)) {
-					System.out.println("TrainFound");
 					return items;
 				}
 				System.out.println(items.get(0));
@@ -92,14 +81,10 @@ public class TextEditor {
 	}
 
 	public void write(String yourText,File file) throws FileNotFoundException {
-		String s = file.getPath();
-		System.out.println(s);
-
 		if (file.exists() && !file.isDirectory()) {
 			writer = new PrintWriter(new FileOutputStream(new File(file.getPath()), true));
 
 		} else {
-			System.out.println("hoi");
 			writer = new PrintWriter(file.getPath());
 		}
 

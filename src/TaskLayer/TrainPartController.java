@@ -10,23 +10,21 @@ import Domain.trainPart.newType;
 public class TrainPartController {
 	private DataHandler dh = new FileHandler();
 
-	public TrainPartType CreateTrainPartType(String code, int zitplaats) {
+	public TrainPartType CreatePartType(String code, int zitplaats) {
 		TrainPartType tpt = new newType(code, zitplaats);
 		return tpt;
 	}
 
-	public void delTrainPartType(String type) {
+	public void delPartType(String type) {
+
+		dh.delType(type);
 
 	}
 
-	
-	
-	public List selectTrainPartTypes(){
-		//the format will be [type,typeZitplaatsen,nextType,nextTypeZitplaatsen]
-	return dh.selectAllTypes();
-		
-		
-		
+	public List selectPartTypes() {
+		// the format will be [type,typeZitplaatsen,nextType,nextTypeZitplaatsen]
+		return dh.selectAllTypes();
+
 	}
 
 }
