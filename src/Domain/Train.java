@@ -7,7 +7,7 @@ import Train_part.TrainPart;
 
 public class Train {
 	String code;
-	List parts;
+	List<TrainPart> parts;
 	
 	public Train(String code) {
 		this.code = code;
@@ -15,14 +15,32 @@ public class Train {
 	}
 	
 	
+	
+	public String getCode() {
+		return code;
+	}
+
+
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+
+
 	public void addParts(TrainPart trainpart) {
 		this.parts.add(trainpart);
 	}
 	
 	
 	
-public List getParts() {
-		return parts;
+public List getPartsTypes() {
+	List l = new ArrayList();
+
+	for (Object o : parts) {
+		l.add(o.toString());
+	}
+		return this.parts;
 	}
 
 @Override

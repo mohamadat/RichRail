@@ -1,1 +1,2 @@
-Train_part.TrainPart@15db9742,Train_part.TrainPart@6d06d69c;
+redTrain -wagon-+-+-Passenger1-+-+-wagon-+-+-Passenger1
+redTrain -wagon-+-+-Passenger1-+-+-wagon-+-+-Passenger1

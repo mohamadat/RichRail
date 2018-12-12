@@ -11,13 +11,22 @@ public class TrainPart {
 		this.type = null;
 	}
 
-	public TrainPartType getType() {
-		return type;
+	public String getType() {
+		return type.getType();
 	}
 
 	public void setType(TrainPartType type) {
 		this.type = type;
 	}
+
+	@Override
+	public String toString() {
+		return type.toString();
+	}
+	
+	
+	
+	
 	
 	
 	
