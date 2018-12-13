@@ -5,4 +5,4 @@ ns Train
 ns Train 
 fff 
 red ,black,black,black,black,black
-jaco ,wagon,wagon,wagon
+jaco ,wagon,wagon,wagon,wagon2

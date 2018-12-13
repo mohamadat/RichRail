@@ -24,14 +24,12 @@ public class Main {
 		
 		//tc.createTrain("jaco");
 		
-		tc.AddTrainPart("jaco", "Wagon");
+		tc.AddTrainPart("jaco", "wagon2");
+		
+		//tpc.CreatePartType("wagon2", 20);
 		
 		
-		
-		
-		
-		
-		
+	 
 		
 		
 		
