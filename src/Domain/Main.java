@@ -22,9 +22,22 @@ public class Main {
 		TrainController tc = new TrainController();
 		TrainPartController tpc = new TrainPartController();
 		
+		//tc.createTrain("jaco");
+		
+		tc.AddTrainPart("jaco", "Wagon");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		//tc.createTrain("red");
 		
-		tc.AddTrainPart("red","black");
+	//	tc.AddTrainPart("red","black");
 		/*
 		tc.AddTrainPart("ns Train","red");
 		tc.AddTrainPart("ns Train","green");

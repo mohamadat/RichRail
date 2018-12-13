@@ -15,7 +15,6 @@ public class Train {
 		this.code = code;
 	this.parts = new ArrayList<TrainPart>();	
 	dh.addTrain(this);
-
 	}
 	
 	public int getTrainSize() {
